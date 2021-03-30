@@ -34,27 +34,27 @@ blah, blah, blah, blah
 
 <script>
 	// Sets variables for allergy count, cold count, allergy percent, and cold percent
-        var allergy_count = 0;
-        var cold_count = 0;
-	var allergy_percent = 0;
-	var cold_percent = 0;
+        var stem_count = 0;
+        var arts_count = 0;
+	var stem_percent = 0;
+	var arts_percent = 0;
 	
 	// Adds one to the allergy symptom count
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
+        function stemAdd(){
+            stem_count = stem_count + 1;
         }
 
 	// Adds one to the cold symptom count
-        function coldAdd(){
-            cold_count = cold_count + 1;
+        function artsAdd(){
+            arts_count = arts_count + 1;
         }
 	
 	// Calculates and displays the probability that it is a cold or allergies
 	function calculateResults(){
-		allergy_percent = 100 * allergy_count / 6;
-		cold_percent = 100 - allergy_percent;
+		stem_percent = 100 * stem_count / 6;
+		arts_percent = 100 - stem_percent;
 		var resultText = document.getElementById("results");
-		resultText.innerHTML = "Probability it is allergies = " + Math.round(allergy_percent) + "% <br> Probability it is a cold = " + Math.round(cold_percent) + "%";
+		resultText.innerHTML = "Stem percentage: " + Math.round(stem_percent) + "% <br> Liberal arts percentage: " + Math.round(arts_percent) + "%";
 	}
   </script>
 
@@ -90,14 +90,14 @@ blah, blah, blah, blah
 <!-- Creates header for front page -->
 <body>
 <div id="header" class="w3-container w3-teal">
-	<h1>Cold or Allergies?</h1>
+	<h1>Stem or liberal arts?</h1>
 </div>
 
 <!-- Creates body text for front page -->
 <div id="content" class="w3-container">
 	<img src="https://collegeinfogeek.com/wp-content/uploads/2018/11/Essential-Books.jpg">
 	
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you unsure about whether you should study STEM or liberal arts? Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -114,9 +114,9 @@ blah, blah, blah, blah
 	
 	<!-- Asks user the first question and adds one to allergy_count for yes, cold_count for no -->
     	<div id="content" class="w3-container">
-        	<p>Are your eyes watery or itchy?</p>
-		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
-		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+        	<p>Do you enjoy writing essays?</p>
+		<a href="#two"  onclick="artsAdd();" class="w3-btn w3-black">Yes</a>
+		<a href="#two"  onclick="stemAdd();" class="w3-btn w3-black">No</a>
     	</div>
 </div>
 
@@ -129,9 +129,9 @@ blah, blah, blah, blah
 
 	<!-- Asks user the second question and adds one to cold_count for yes, allergy_count for no -->
 	<div id="content" class="w3-container">
-		<p>Do you have a fever?</p>
-		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
-		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		<p>Do you enjoy logical problem solving?</p>
+		<a href="#three"  onclick="stemAdd();" class="w3-btn w3-black">Yes</a>
+		<a href="#three"  onclick="artsAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div>	
 
@@ -144,9 +144,9 @@ blah, blah, blah, blah
 	
 	<!-- Asks user the third question and adds one to cold_count for yes, allergy_count for no -->
 	<div id="content" class="w3-container">
-		<p>Do you have a sore throat?</p>
-		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
-		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		<p>Are you good at math?</p>
+		<a href="#four"  onclick="stemAdd();" class="w3-btn w3-black">Yes</a>
+		<a href="#four"  onclick="artsAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div>	
 
@@ -158,9 +158,9 @@ blah, blah, blah, blah
 
 	<!-- Asks user the fourth question and adds one to allergy_count for yes, cold_count for no -->
     	<div id="content" class="w3-container">
-        	<p>Are your symptoms seasonal?</p>
-		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
-		<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+        	<p>Do you read a lot for fun?</p>
+		<a href="#five"  onclick="artsAdd();" class="w3-btn w3-black">Yes</a>
+		<a href="#five"  onclick="stemAdd();" class="w3-btn w3-black">No</a>
     	</div>
 </div>
 
@@ -173,9 +173,9 @@ blah, blah, blah, blah
 	
 	<!-- Asks user the fifth question and adds one to cold_count for yes, allergy_count for no -->
     	<div id="content" class="w3-container">
-        	<p>Do you have general aches and pains?</p>
-		<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
-		<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+        	<p>Would you rather have to do more projects or exams?</p>
+		<a href="#six"  onclick="artsAdd();" class="w3-btn w3-black">Projects</a>
+		<a href="#six"  onclick="stemAdd();" class="w3-btn w3-black">Exams</a>
     	</div>
 </div>	
 
@@ -188,9 +188,9 @@ blah, blah, blah, blah
 	
 	<!-- Asks user the sixth question and adds one to allergy_count for yes, cold_count for no -->
     	<div id="content" class="w3-container">
-        	<p>Have your symptoms lasted for more than a week?</p>
-		<a href="#results_page"  onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
-		<a href="#results_page"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+        	<p>Are you more impressed by scientific achievements or great works of literature?</p>
+		<a href="#results_page"  onclick="stemAdd();" class="w3-btn w3-black">Science</a>
+		<a href="#results_page"  onclick="artsAdd();" class="w3-btn w3-black">Literature</a>
     	</div>
 </div>	
 
