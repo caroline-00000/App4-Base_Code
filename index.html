@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+This app aims to aid the user in determining whether they would be more well-suited to studying STEM or liberal arts.
  
 Known Issues:
-blah, blah, blah, blah
+There are currently no known issues.
 -->
 
    <head>       
@@ -33,23 +33,23 @@ blah, blah, blah, blah
 
 
 <script>
-	// Sets variables for allergy count, cold count, allergy percent, and cold percent
+	// Sets variables for STEM count, liberal arts count, STEM percent, and liberal arts percent
         var stem_count = 0;
         var arts_count = 0;
 	var stem_percent = 0;
 	var arts_percent = 0;
 	
-	// Adds one to the allergy symptom count
+	// Adds one to the STEM count
         function stemAdd(){
             stem_count = stem_count + 1;
         }
 
-	// Adds one to the cold symptom count
+	// Adds one to the liberal arts count
         function artsAdd(){
             arts_count = arts_count + 1;
         }
 	
-	// Calculates and displays the probability that it is a cold or allergies
+	// Calculates and displays the percentages for STEM and liberal arts
 	function calculateResults(){
 		stem_percent = 100 * stem_count / 6;
 		arts_percent = 100 - stem_percent;
@@ -90,7 +90,7 @@ blah, blah, blah, blah
 <!-- Creates header for front page -->
 <body>
 <div id="header" class="w3-container w3-teal">
-	<h1>Stem or liberal arts?</h1>
+	<h1>STEM or liberal arts?</h1>
 </div>
 
 <!-- Creates body text for front page -->
@@ -112,7 +112,7 @@ blah, blah, blah, blah
 		<h1>Question 1</h1>
 	</div>
 	
-	<!-- Asks user the first question and adds one to allergy_count for yes, cold_count for no -->
+	<!-- Asks user the first question and adds one to arts_count for yes, stem_count for no -->
     	<div id="content" class="w3-container">
         	<p>Do you enjoy writing essays?</p>
 		<a href="#two"  onclick="artsAdd();" class="w3-btn w3-black">Yes</a>
@@ -127,7 +127,7 @@ blah, blah, blah, blah
 		<h1>Question 2</h1>
 	</div>
 
-	<!-- Asks user the second question and adds one to cold_count for yes, allergy_count for no -->
+	<!-- Asks user the second question and adds one to stem_count for yes, arts_count for no -->
 	<div id="content" class="w3-container">
 		<p>Do you enjoy logical problem solving?</p>
 		<a href="#three"  onclick="stemAdd();" class="w3-btn w3-black">Yes</a>
@@ -142,7 +142,7 @@ blah, blah, blah, blah
 		<h1>Question 3</h1>
 	</div>
 	
-	<!-- Asks user the third question and adds one to cold_count for yes, allergy_count for no -->
+	<!-- Asks user the third question and adds one to stem_count for yes, arts_count for no -->
 	<div id="content" class="w3-container">
 		<p>Are you good at math?</p>
 		<a href="#four"  onclick="stemAdd();" class="w3-btn w3-black">Yes</a>
@@ -156,7 +156,7 @@ blah, blah, blah, blah
 		<h1>Question 4</h1>
 	</div>
 
-	<!-- Asks user the fourth question and adds one to allergy_count for yes, cold_count for no -->
+	<!-- Asks user the fourth question and adds one to arts_count for yes, stem_count for no -->
     	<div id="content" class="w3-container">
         	<p>Do you read a lot for fun?</p>
 		<a href="#five"  onclick="artsAdd();" class="w3-btn w3-black">Yes</a>
@@ -171,7 +171,7 @@ blah, blah, blah, blah
 		<h1>Question 5</h1>
 	</div>
 	
-	<!-- Asks user the fifth question and adds one to cold_count for yes, allergy_count for no -->
+	<!-- Asks user the fifth question and adds one to arts_count for "projects", stem_count for "exams" -->
     	<div id="content" class="w3-container">
         	<p>Would you rather have to do more projects or exams?</p>
 		<a href="#six"  onclick="artsAdd();" class="w3-btn w3-black">Projects</a>
@@ -186,7 +186,7 @@ blah, blah, blah, blah
 		<h1>Question 6</h1>
 	</div>
 	
-	<!-- Asks user the sixth question and adds one to allergy_count for yes, cold_count for no -->
+	<!-- Asks user the sixth question and adds one to stem_count for "science", arts_count for "literature" -->
     	<div id="content" class="w3-container">
         	<p>Are you more impressed by scientific achievements or great works of literature?</p>
 		<a href="#results_page"  onclick="stemAdd();" class="w3-btn w3-black">Science</a>
